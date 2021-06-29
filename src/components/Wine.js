@@ -1,7 +1,6 @@
 import React from "react";
 
 function Wine(props) {
-  console.log(`Produkt: ${props.productMatchesLength}`);
   return (
     <div>
       <div className="productTitle">{props.productMatches.title}</div>

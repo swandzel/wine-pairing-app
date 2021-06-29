@@ -16,13 +16,13 @@ function App() {
         .then((data) => {
           setWine(data);
           setQuery("");
-          console.log(data);
-          console.log(data.productMatches.length);
+          // console.log(data);
+          // console.log(data.productMatches.length);
         })
         .catch((err) => console.log(err));
     }
   };
-
+  // console.log(wine.productMatches[0]);/
   return (
     <div className="App">
       <div className="search-box">
@@ -36,13 +36,16 @@ function App() {
         />
       </div>
 
-      <Grapes pairedWines={wine.pairedWines} pairingText={wine.pairingText} />
-
-      {typeof productMatches !== "undefined" ? (
-        <Wine
-          productMatches={wine.productMatches[0]}
-          productMatchesLength={wine.productMatches.length}
-        />
+      {typeof wine.productMatches !== "undefined" ? (
+        <>
+          <Grapes
+            pairedWines={wine.pairedWines}
+            pairingText={wine.pairingText}
+          />
+          {wine.productMatches.length > 0 ? (
+            <Wine productMatches={wine.productMatches[0]} />
+          ) : null}
+        </>
       ) : (
         wine.message
       )}
