@@ -19,7 +19,7 @@ function Wine(props) {
         <img
           className="image"
           src={props.productMatches.imageUrl}
-          alt={props.productMatches.title}
+          alt="Our recommended wine"
         />
       </div>
     </div>

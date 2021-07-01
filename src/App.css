@@ -12,6 +12,7 @@
   border-radius: 30px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
+  padding: 2rem 0rem;
   margin-top: 1rem;
   opacity: 0.8;
 }
@@ -33,8 +34,9 @@
   color: #000;
   text-transform: uppercase;
   border-radius: 30px;
-  padding: 2rem 0rem;
+  padding: 0rem 0rem 2rem 0rem;
   margin-left: 3rem;
+  cursor: pointer;
 }
 
 .search-bar {
@@ -75,5 +77,9 @@
 }
 
 .error {
-  padding: 1rem 0rem 2rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.info {
+  padding: 1rem 0rem 0rem 0rem;
 }
