@@ -16,11 +16,9 @@ function Wine(props) {
             </button>
           </a>
         </div>
-        <img
-          className="image"
-          src={props.productMatches.imageUrl}
-          alt="Our recommended wine"
-        />
+        <div className="image">
+          <img src={props.productMatches.imageUrl} alt="Our recommended wine" />
+        </div>
       </div>
     </div>
   );

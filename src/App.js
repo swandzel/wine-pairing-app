@@ -1,4 +1,4 @@
-import { useState, Link } from "react";
+import { useState } from "react";
 import "./App.css";
 import Grapes from "./components/Grapes";
 import Wine from "./components/Wine";
@@ -10,7 +10,7 @@ function App() {
     "Are you looking for a wine that suits your food? Enter what you will eat and we will find the right wine for you!"
   );
   const [info, setInfo] = useState(
-    "Type for example beef, pizza, burger, cake etc."
+    "Type for example beef, pizza, burger, asparagus etc."
   );
 
   const fetchFunc = () => {
@@ -23,7 +23,7 @@ function App() {
         setQuery("");
         setFood("Are you going to eat something else?");
         setInfo("");
-        console.log(data);
+        // console.log(data);
         // console.log(data.productMatches.length);
       })
       .catch((err) => console.log(err));
@@ -40,45 +40,61 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="logo" onClick={refreshPage}>
-        <i class="fas fa-wine-glass-alt glass"></i>
-        wine pairing app
-      </div>
-      <div className="container">
-        <div className="food">{food}</div>
-        <div className="search-container">
-          <div className="search-box">
-            <input
-              type="text"
-              className="search-bar"
-              onChange={(e) => setQuery(e.target.value)}
-              value={query}
-              onKeyPress={search}
-              placeholder="Look for wine for yourself "
-            />
-          </div>
-          <button className="search-btn" onClick={fetchFunc}>
-            <i class="fas fa-search"></i>
-          </button>
+    <>
+      <div className="App">
+        <div className="logo" onClick={refreshPage}>
+          <i className="fas fa-wine-glass-alt glass"></i>
+          wine pairing app
         </div>
-        <div className="info">{info}</div>
+        <div className="container">
+          <div className="food">{food}</div>
+          <div className="search-container">
+            <div className="search-box">
+              <input
+                type="text"
+                className="search-bar"
+                onChange={(e) => setQuery(e.target.value)}
+                value={query}
+                onKeyPress={search}
+                placeholder="Look for wine for yourself "
+              />
+            </div>
+            <button className="search-btn" onClick={fetchFunc}>
+              <i className="fas fa-search"></i>
+            </button>
+          </div>
+          <div className="info">{info}</div>
 
-        {typeof wine.productMatches !== "undefined" ? (
-          <>
-            <Grapes
-              pairedWines={wine.pairedWines}
-              pairingText={wine.pairingText}
-            />
-            {wine.productMatches.length > 0 ? (
-              <Wine productMatches={wine.productMatches[0]} />
-            ) : null}
-          </>
-        ) : (
-          <span className="error">{wine.message}</span>
-        )}
+          {typeof wine.productMatches !== "undefined" ? (
+            <>
+              <Grapes
+                pairedWines={wine.pairedWines}
+                pairingText={wine.pairingText}
+              />
+              {wine.productMatches.length > 0 ? (
+                <Wine productMatches={wine.productMatches[0]} />
+              ) : null}
+            </>
+          ) : (
+            <span className="error">{wine.message}</span>
+          )}
+        </div>
       </div>
-    </div>
+      <div className="footer">
+        Created by{" "}
+        <a href="https://swandzel.pl/" target="_blank" rel="noreferrer">
+          swandzel
+        </a>{" "}
+        with{" "}
+        <a
+          href="https://spoonacular.com/food-api"
+          target="_blank"
+          rel="noreferrer"
+        >
+          spoonacular API
+        </a>
+      </div>
+    </>
   );
 }
 

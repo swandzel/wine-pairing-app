@@ -6,14 +6,14 @@
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
-  min-height: 300px;
   width: 900px;
+  min-width: 300px;
   background-color: #f5f3f4;
   border-radius: 30px;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
   padding: 2rem 0rem;
-  margin-top: 1rem;
+  margin: 1rem 0rem 0rem 0rem;
   opacity: 0.8;
 }
 
@@ -46,7 +46,7 @@
   margin: 1rem 1rem;
   border-radius: 30px;
   border: 0px;
-  min-width: 500px;
+  width: 500px;
 }
 
 .search-container {
@@ -60,7 +60,6 @@
   color: #22223b;
   font-size: 2rem;
   border: 0px;
-  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -82,4 +81,79 @@
 
 .info {
   padding: 1rem 0rem 0rem 0rem;
+}
+
+.footer {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 1rem 0rem;
+  font-size: 0.75rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 916px) {
+  .App {
+    width: 100%;
+  }
+
+  .search-bar {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .logo {
+    font-size: 3.75rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+
+  .search-bar {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* .App {
+    width: 100%;
+  } */
+
+  .logo {
+    font-size: 3.5rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+  .search-bar {
+    font-size: 1.25rem;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 3rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    background-color: #a4161bde;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 0.25rem 0rem;
+    width: 300px;
+  }
 }
