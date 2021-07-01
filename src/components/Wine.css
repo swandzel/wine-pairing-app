@@ -1,0 +1,60 @@
+.container-wine {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product {
+  flex: 2;
+  padding: 0rem 2rem;
+}
+
+.productTitle {
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+
+.productDescription {
+  padding-bottom: 1rem;
+}
+
+.image {
+  flex: 1;
+  min-height: 250px;
+  width: auto;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.buy {
+  font-size: 1rem;
+  background-color: #a4161a;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.buy:hover {
+  background-color: #a4161bde;
+}
+
+.buy a {
+  text-decoration: none;
+  color: #000;
+}
