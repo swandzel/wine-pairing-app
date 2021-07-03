@@ -12,7 +12,7 @@ function Wine(props) {
           </div>
           <a href={props.productMatches.link} target="_blank" rel="noreferrer">
             <button className="buy">
-              Buy This Wine ({props.productMatches.price}
+              Buy This Wine ({props.productMatches.price})
             </button>
           </a>
         </div>

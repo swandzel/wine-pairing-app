@@ -14,7 +14,7 @@
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
   padding: 2rem 0rem;
   margin: 1rem 0rem 0rem 0rem;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 .container {
@@ -39,6 +39,13 @@
   cursor: pointer;
 }
 
+.search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .search-bar {
   font-size: 1.5rem;
   text-align: center;
@@ -47,13 +54,6 @@
   border-radius: 30px;
   border: 0px;
   width: 500px;
-}
-
-.search-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 .search-btn {
@@ -113,34 +113,24 @@
 
   .logo {
     font-size: 3.75rem;
-    margin-left: 0rem;
-    justify-content: center;
   }
 
   .search-bar {
     width: 300px;
+  }
+
+  .search-btn {
+    font-size: 1.75rem;
   }
 }
 
 @media screen and (max-width: 450px) {
-  /* .App {
-    width: 100%;
-  } */
+  .container {
+    padding: 0 1.8rem;
+  }
 
   .logo {
     font-size: 3.5rem;
-    margin-left: 0rem;
-    justify-content: center;
-  }
-  .search-bar {
-    font-size: 1.25rem;
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .logo {
-    font-size: 3rem;
     margin-left: 0rem;
     justify-content: center;
   }
@@ -149,11 +139,61 @@
     flex-direction: column;
   }
 
+  .search-bar {
+    /* width: 300px; */
+    width: 300px;
+  }
+
   .search-btn {
     background-color: #a4161bde;
     color: #fff;
     font-size: 1.25rem;
-    padding: 0.25rem 0rem;
+    padding: 0.35rem 0rem;
+    margin: 0rem 0rem;
     width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .logo {
+    font-size: 2.75rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+
+  .search-bar {
+    padding: 8px 0px;
+    font-size: 1.25rem;
+    width: 280px;
+  }
+
+  .search-btn {
+    width: 280px;
+  }
+
+  .food {
+    padding-bottom: 0rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .search-bar {
+    width: 250px;
+  }
+
+  .search-btn {
+    width: 250px;
   }
 }
