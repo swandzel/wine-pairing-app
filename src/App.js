@@ -13,26 +13,30 @@ function App() {
     "Type for example beef, pizza, burger, asparagus etc."
   );
 
-  const fetchFunc = () => {
-    fetch(
-      `https://api.spoonacular.com/food/wine/pairing?food=${query}&apiKey=8395e847ccc4443ea9277390146ac94e`
-    )
-      .then((data) => data.json())
-      .then((data) => {
-        setWine(data);
-        setQuery("");
-        setFood("Are you going to eat something else?");
-        setInfo("");
-        // console.log(data);
-        // console.log(data.productMatches.length);
-      })
-      .catch((err) => console.log(err));
-  };
-
   const search = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && query !== "") {
       fetchFunc();
     }
+    return false;
+  };
+
+  const fetchFunc = () => {
+    if (query !== "") {
+      fetch(
+        `https://api.spoonacular.com/food/wine/pairing?food=${query}&apiKey=8395e847ccc4443ea9277390146ac94e`
+      )
+        .then((data) => data.json())
+        .then((data) => {
+          setWine(data);
+          setQuery("");
+          setFood("Are you going to eat something else?");
+          setInfo("");
+          // console.log(data);
+          // console.log(data.productMatches.length);
+        })
+        .catch((err) => console.log(err));
+    }
+    return false;
   };
 
   const refreshPage = () => {
