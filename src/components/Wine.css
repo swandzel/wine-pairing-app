@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   margin: 2rem 0rem;
 }
 
@@ -9,6 +10,7 @@
   display: flex;
   flex-direction: column;
   padding-right: 2rem;
+  flex: 2;
 }
 
 .productTitle {
@@ -23,7 +25,7 @@
 
 .image {
   min-width: 200px;
-  height: 350px;
+  flex: 1;
 }
 
 img {
