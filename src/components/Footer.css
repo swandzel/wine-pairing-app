@@ -1,0 +1,12 @@
+.footer {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 1rem 0rem;
+  font-size: 0.75rem;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}

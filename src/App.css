@@ -24,56 +24,6 @@
   text-align: center;
 }
 
-.logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-family: "Big Shoulders Stencil Display", cursive;
-  font-size: 4rem;
-  text-align: center;
-  color: #000;
-  text-transform: uppercase;
-  border-radius: 30px;
-  padding: 0rem 0rem 2rem 0rem;
-  margin-left: 3rem;
-  cursor: pointer;
-}
-
-.search-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-bar {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 5px 10px;
-  margin: 1rem 0rem;
-  border-radius: 30px;
-  border: 0px;
-  width: 500px;
-}
-
-.search-btn {
-  background-color: #f5f3f4;
-  color: #22223b;
-  font-size: 2rem;
-  border: 0px;
-  cursor: pointer;
-  opacity: 0.95;
-  margin-left: 1rem;
-}
-
-.glass {
-  font-size: 1.75rem;
-  color: #fff;
-  background-color: #a4161a;
-  padding: 10px 15px;
-  border-radius: 30rem;
-  margin-right: 1rem;
-}
 .food {
   padding-bottom: 1rem;
 }
@@ -86,26 +36,9 @@
   padding: 1rem 0rem 0rem 0rem;
 }
 
-.footer {
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 1rem 0rem;
-  font-size: 0.75rem;
-}
-
-.footer a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
-}
-
 @media screen and (max-width: 916px) {
   .App {
     width: 96vw;
-  }
-
-  .search-bar {
-    width: 400px;
   }
 }
 
@@ -113,68 +46,17 @@
   .container {
     padding: 0 2rem;
   }
-
-  .logo {
-    font-size: 3.75rem;
-  }
-
-  .search-bar {
-    width: 300px;
-  }
-
-  .search-btn {
-    font-size: 1.75rem;
-  }
 }
 
 @media screen and (max-width: 450px) {
   .container {
     padding: 0 1.8rem;
   }
-
-  .logo {
-    font-size: 3.5rem;
-    margin-left: 0rem;
-    justify-content: center;
-  }
-
-  .search-container {
-    flex-direction: column;
-  }
-
-  .search-bar {
-    width: 300px;
-  }
-
-  .search-btn {
-    background-color: #a4161bde;
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 0.35rem 0rem;
-    margin: 0rem 0rem;
-    width: 300px;
-  }
 }
 
 @media screen and (max-width: 400px) {
   .container {
     padding: 0 1.25rem;
-  }
-
-  .logo {
-    font-size: 2.75rem;
-    margin-left: 0rem;
-    justify-content: center;
-  }
-
-  .search-bar {
-    padding: 8px 0px;
-    font-size: 1.25rem;
-    width: 280px;
-  }
-
-  .search-btn {
-    width: 280px;
   }
 
   .food {
@@ -185,17 +67,5 @@
 @media screen and (max-width: 355px) {
   .container {
     padding: 0 0.5rem;
-  }
-
-  .logo {
-    font-size: 2.5rem;
-  }
-
-  .search-bar {
-    width: 250px;
-  }
-
-  .search-btn {
-    width: 250px;
   }
 }

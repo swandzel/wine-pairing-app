@@ -1,7 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+import Logo from "./components/Logo";
+import SearchBar from "./components/SearchBar";
 import Grapes from "./components/Grapes";
 import Wine from "./components/Wine";
+import Footer from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -31,8 +34,6 @@ function App() {
           setQuery("");
           setFood("Are you going to eat something else?");
           setInfo("");
-          // console.log(data);
-          // console.log(data.productMatches.length);
         })
         .catch((err) => console.log(err));
     }
@@ -46,27 +47,15 @@ function App() {
   return (
     <>
       <div className="App">
-        <div className="logo" onClick={refreshPage}>
-          <i className="fas fa-wine-glass-alt glass"></i>
-          wine pairing app
-        </div>
+        <Logo refreshPage={refreshPage} />
         <div className="container">
           <div className="food">{food}</div>
-          <div className="search-container">
-            <div className="search-box">
-              <input
-                type="text"
-                className="search-bar"
-                onChange={(e) => setQuery(e.target.value)}
-                value={query}
-                onKeyPress={search}
-                placeholder="Look for wine for yourself "
-              />
-            </div>
-            <button className="search-btn" onClick={fetchFunc}>
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
+          <SearchBar
+            fetchFunc={fetchFunc}
+            query={query}
+            queryFromSearch={(query) => setQuery(query)}
+            search={search}
+          />
           <div className="info">{info}</div>
 
           {typeof wine.productMatches !== "undefined" ? (
@@ -84,20 +73,7 @@ function App() {
           )}
         </div>
       </div>
-      <div className="footer">
-        Created by{" "}
-        <a href="https://swandzel.pl/" target="_blank" rel="noreferrer">
-          swandzel
-        </a>{" "}
-        with{" "}
-        <a
-          href="https://spoonacular.com/food-api"
-          target="_blank"
-          rel="noreferrer"
-        >
-          spoonacular API
-        </a>
-      </div>
+      <Footer />
     </>
   );
 }

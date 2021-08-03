@@ -1,0 +1,51 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Big Shoulders Stencil Display", cursive;
+  font-size: 4rem;
+  text-align: center;
+  color: #000;
+  text-transform: uppercase;
+  border-radius: 30px;
+  padding: 0rem 0rem 2rem 0rem;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.glass {
+  font-size: 1.75rem;
+  color: #fff;
+  background-color: #a4161a;
+  padding: 10px 15px;
+  border-radius: 30rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 3.75rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo {
+    font-size: 3.5rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 2.75rem;
+    margin-left: 0rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+}
