@@ -15,7 +15,7 @@ function Footer() {
         rel="noreferrer"
       >
         spoonacular API
-      </a>
+      </a> with React JS
     </div>
   );
 }
