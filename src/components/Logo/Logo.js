@@ -1,13 +1,13 @@
 import React from "react";
 import "./Logo.css";
 
-function Logo(props) {
+const Logo = ({ refreshPage }) => {
   return (
-    <div className="logo" onClick={props.refreshPage}>
+    <div className="logo" onClick={refreshPage}>
       <i className="fas fa-wine-glass-alt glass"></i>
       wine pairing app
     </div>
   );
-}
+};
 
 export default Logo;

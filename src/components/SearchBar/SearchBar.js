@@ -1,24 +1,24 @@
 import React from "react";
 import "./SearchBar.css";
 
-function SearchBar(props) {
+const SearchBar = ({ fetchFunc, query, queryFromSearch, search }) => {
   return (
     <div className="search-container">
       <div className="search-box">
         <input
           type="text"
           className="search-bar"
-          onChange={(e) => props.queryFromSearch(e.target.value)}
-          value={props.query}
-          onKeyPress={props.search}
+          onChange={(e) => queryFromSearch(e.target.value)}
+          value={query}
+          onKeyPress={search}
           placeholder="Look for wine for yourself "
         />
       </div>
-      <button className="search-btn" onClick={props.fetchFunc}>
+      <button className="search-btn" onClick={fetchFunc}>
         <i className="fas fa-search"></i>
       </button>
     </div>
   );
-}
+};
 
 export default SearchBar;

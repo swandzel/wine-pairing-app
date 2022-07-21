@@ -1,27 +1,27 @@
 import React from "react";
 import "./Wine.css";
 
-function Wine(props) {
+const Wine = ({ productMatches }) => {
   return (
     <div className="container-wine">
       <div className="product-container">
         <div className="product">
-          <div className="productTitle">{props.productMatches.title}</div>
+          <div className="productTitle">{productMatches?.title}</div>
           <div className="productDescription">
-            {props.productMatches.description}
+            {productMatches?.description}
           </div>
-          <a href={props.productMatches.link} target="_blank" rel="noreferrer">
+          <a href={productMatches?.link} target="_blank" rel="noreferrer">
             <button className="buy">
-              Buy This Wine ({props.productMatches.price})
+              Buy This Wine ({productMatches?.price})
             </button>
           </a>
         </div>
         <div className="image">
-          <img src={props.productMatches.imageUrl} alt="Our recommended wine" />
+          <img src={productMatches?.imageUrl} alt="Our recommended wine" />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Wine;

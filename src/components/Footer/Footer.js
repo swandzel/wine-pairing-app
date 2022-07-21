@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="footer">
       Created by{" "}
@@ -15,9 +15,10 @@ function Footer() {
         rel="noreferrer"
       >
         spoonacular API
-      </a> with React JS
+      </a>{" "}
+      with React
     </div>
   );
-}
+};
 
 export default Footer;

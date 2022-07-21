@@ -15,6 +15,10 @@
   width: 500px;
 }
 
+.search-box {
+  margin-right: 1rem;
+}
+
 .search-btn {
   background-color: #f5f3f4;
   color: #22223b;
@@ -22,7 +26,11 @@
   border: 0px;
   cursor: pointer;
   opacity: 0.95;
-  margin-left: 1rem;
+}
+
+.search-btn i {
+  width: 32px;
+  height: 32px;
 }
 
 @media screen and (max-width: 916px) {
