@@ -7,7 +7,7 @@ import Grapes from "./components/Grapes/Grapes";
 import Wine from "./components/Wine/Wine";
 import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -29,8 +29,8 @@ function App() {
 
   const fetchFunc = async () => {
     if (query !== "") {
-      setLoader(true);
       setWine(null);
+      setLoader(true);
       try {
         const { data } = await axios.get(
           `https://wine-paring.herokuapp.com/getWine?food=${query.toLocaleLowerCase()}`
@@ -41,7 +41,7 @@ function App() {
           setWine(data.data);
           setQuery("");
           setFood("Are you going to eat something else?");
-          setInfo("");
+          setInfo(`Results for "${data.data.food}"`);
         }
         //should be not found
         if (data.status === "error") {
@@ -64,47 +64,62 @@ function App() {
   };
 
   const variants = {
-    open: { height: "auto" },
-    closed: { height: "500px" },
+    open: { height: "auto", opacity: 1 },
+    closed: { height: "500px", opacity: 1 },
+    initial: { opacity: 1 },
   };
 
   return (
     <>
-      <motion.div
-        animate={wine ? "open" : "closed"}
-        variants={variants}
-        transition={{ ease: "linear" }}
-        className="App"
-      >
-        <Logo refreshPage={refreshPage} />
-        <div className="container">
-          <div className="food">{food}</div>
-          <SearchBar
-            fetchFunc={fetchFunc}
-            query={query}
-            queryFromSearch={(query) => setQuery(query)}
-            search={search}
-          />
-          <div className="info">{info}</div>
-
-          {loader && <Loader />}
-
-          {wine && wine.pairedWines && wine.pairingText && wine.productMatches && (
+      <AnimatePresence exitBeforeEnter>
+        <motion.div
+          initial="initial"
+          animate={wine ? "open" : "closed"}
+          exit={!wine ? "open" : "closed"}
+          key={loader}
+          variants={variants}
+          transition={{ ease: "linear", delay: 0.2 }}
+          className="App"
+        >
+          <Logo refreshPage={refreshPage} />
+          <div className="container">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              key={wine.food}
+              exit={{ opacity: 0 }}
+              key={food}
+              className="food"
             >
-              <Grapes
-                pairedWines={wine.pairedWines}
-                pairingText={wine.pairingText}
-              />
-              <Wine productMatches={wine.productMatches} />
+              {food}
             </motion.div>
-          )}
-        </div>
-      </motion.div>
+
+            <SearchBar
+              fetchFunc={fetchFunc}
+              query={query}
+              queryFromSearch={(query) => setQuery(query)}
+              search={search}
+            />
+            <motion.div className="info">{info}</motion.div>
+
+            {loader && <Loader />}
+
+            {wine && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                key={wine.food}
+              >
+                <Grapes
+                  pairedWines={wine.pairedWines}
+                  pairingText={wine.pairingText}
+                />
+                <Wine productMatches={wine.productMatches} />
+              </motion.div>
+            )}
+          </div>
+        </motion.div>
+      </AnimatePresence>
       <Footer />
     </>
   );

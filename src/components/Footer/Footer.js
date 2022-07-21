@@ -8,15 +8,7 @@ const Footer = () => {
       <a href="https://swandzel.pl/" target="_blank" rel="noreferrer">
         swandzel
       </a>{" "}
-      with{" "}
-      <a
-        href="https://spoonacular.com/food-api"
-        target="_blank"
-        rel="noreferrer"
-      >
-        spoonacular API
-      </a>{" "}
-      with React
+      with React, Express & MongoDB | 2021 / 2022
     </div>
   );
 };

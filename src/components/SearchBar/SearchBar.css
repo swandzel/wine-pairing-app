@@ -66,6 +66,10 @@
     margin: 0rem 0rem;
     width: 300px;
   }
+
+  .search-btn i {
+    height: 20px;
+  }
 }
 
 @media screen and (max-width: 400px) {
