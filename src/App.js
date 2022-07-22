@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from "axios";
 import "./App.css";
 import Logo from "./components/Logo/Logo";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -9,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeAnimation, containerAnimation } from "./utils/framer-animations";
+import callAPI from "./utils/callAPI";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -26,45 +26,17 @@ function App() {
 
   const search = (e) => {
     if (e.key === "Enter" && query !== "") {
-      fetchFunc();
+      callAPI(setWine, setLoader, setQuery, setFood, setInfo, query);
     }
     return false;
   };
 
-  const fetchFunc = async () => {
-    if (query !== "") {
-      setWine(null);
-      setLoader(true);
-      try {
-        const { data } = await axios.get(
-          `https://wine-paring.herokuapp.com/getWine?food=${query.toLocaleLowerCase()}`
-        );
-        console.log(data);
-
-        if (data.status === "success") {
-          setWine(data.data);
-          setQuery("");
-          setFood("Are you going to eat something else?");
-          setInfo(`Results for "${data.data.food}"`);
-        }
-        //should be not found
-        if (data.status === "not found") {
-          setWine(null);
-          setInfo(data.data.message);
-          setQuery("");
-          setFood(
-            "Are you looking for a wine that suits your food? Enter what you will eat and we will find the right wine for you!"
-          );
-        }
-        setLoader(false);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-  };
-
   const refreshPage = () => {
     window.location.reload();
+  };
+
+  const fetchFunc = () => {
+    callAPI(setWine, setLoader, setQuery, setFood, setInfo, query);
   };
 
   return (
