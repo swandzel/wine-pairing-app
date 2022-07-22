@@ -8,6 +8,7 @@ import Wine from "./components/Wine/Wine";
 import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeAnimation, containerAnimation } from "./utils/framer-animations";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -19,6 +20,9 @@ function App() {
     "Type for example beef, pizza, burger, asparagus etc."
   );
   const [loader, setLoader] = useState(false);
+
+  const { hidden, visible, exit, fadeTransition } = fadeAnimation;
+  const { open, closed, initial, containerTransition } = containerAnimation;
 
   const search = (e) => {
     if (e.key === "Enter" && query !== "") {
@@ -63,30 +67,23 @@ function App() {
     window.location.reload();
   };
 
-  const variants = {
-    open: { height: "auto", opacity: 1 },
-    closed: { height: "500px", opacity: 1 },
-    initial: { opacity: 1 },
-  };
-
   return (
     <>
       <AnimatePresence exitBeforeEnter>
         <motion.div
-          initial="initial"
-          animate={wine ? "open" : "closed"}
-          exit={!wine ? "open" : "closed"}
+          initial={initial}
+          animate={wine ? open : closed}
+          exit={!wine ? open : closed}
           key={loader}
-          variants={variants}
-          transition={{ ease: "linear", delay: 0.2 }}
+          transition={containerTransition}
           className="App"
         >
           <Logo refreshPage={refreshPage} />
           <div className="container">
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={hidden}
+              animate={visible}
+              exit={exit}
               key={food}
               className="food"
             >
@@ -100,9 +97,9 @@ function App() {
               search={search}
             />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={hidden}
+              animate={visible}
+              exit={exit}
               className="info"
             >
               {info}
@@ -112,9 +109,9 @@ function App() {
 
             {wine && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1 }}
+                initial={hidden}
+                animate={visible}
+                transition={fadeTransition}
                 key={wine.food}
               >
                 <Grapes
