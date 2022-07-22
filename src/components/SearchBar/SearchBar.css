@@ -42,6 +42,7 @@
 @media screen and (max-width: 600px) {
   .search-bar {
     width: 300px;
+    font-size: 1.25rem;
   }
 
   .search-btn {
@@ -52,10 +53,6 @@
 @media screen and (max-width: 450px) {
   .search-container {
     flex-direction: column;
-  }
-
-  .search-bar {
-    width: 300px;
   }
 
   .search-btn {
@@ -70,12 +67,16 @@
   .search-btn i {
     height: 20px;
   }
+
+  .search-box {
+    margin-right: 0rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .search-bar {
     padding: 8px 0px;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     width: 280px;
   }
 

@@ -44,7 +44,7 @@ function App() {
           setInfo(`Results for "${data.data.food}"`);
         }
         //should be not found
-        if (data.status === "error") {
+        if (data.status === "not found") {
           setWine(null);
           setInfo(data.data.message);
           setQuery("");
@@ -99,7 +99,14 @@ function App() {
               queryFromSearch={(query) => setQuery(query)}
               search={search}
             />
-            <motion.div className="info">{info}</motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="info"
+            >
+              {info}
+            </motion.div>
 
             {loader && <Loader />}
 
