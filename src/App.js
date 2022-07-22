@@ -10,7 +10,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { fadeAnimation, containerAnimation } from "./utils/framer-animations";
 import callAPI from "./utils/callAPI";
 
-function App() {
+const App = () => {
   const [query, setQuery] = useState("");
   const [wine, setWine] = useState(null);
   const [food, setFood] = useState(
@@ -93,12 +93,25 @@ function App() {
                 <Wine productMatches={wine.productMatches} />
               </motion.div>
             )}
+            {!wine && (
+              <motion.div
+                initial={hidden}
+                animate={visible}
+                exit={exit}
+                className="how-it-works"
+              >
+                <p>
+                  <i className="fas fa-info-circle"></i>
+                  Types of food available in the database: pizza, pork, lamb
+                </p>
+              </motion.div>
+            )}
           </div>
         </motion.div>
       </AnimatePresence>
       <Footer />
     </>
   );
-}
+};
 
 export default App;

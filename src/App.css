@@ -14,7 +14,6 @@
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.27);
   padding: 2rem 0rem;
   margin-top: 1rem;
-  opacity: 0.95;
   min-height: 500px;
 }
 
@@ -37,6 +36,17 @@
   padding-top: 1rem;
 }
 
+.how-it-works {
+  text-align: center;
+  margin-top: 150px;
+  color: rgb(73, 71, 71);
+}
+
+.how-it-works p i {
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 916px) {
   .App {
     width: 96vw;
@@ -47,11 +57,23 @@
   .container {
     padding: 0 2rem;
   }
+
+  .how-it-works {
+    margin-top: 130px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .container {
     padding: 0 1.8rem;
+  }
+
+  .how-it-works {
+    font-size: 0.75rem;
+  }
+
+  .how-it-works p i {
+    margin-right: 5px;
   }
 }
 

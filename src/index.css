@@ -13,6 +13,7 @@ body {
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-left: calc(100vw - 100%);
 }
 
 /* @media screen and (max-width: 600px) {
