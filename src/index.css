@@ -14,10 +14,5 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   padding-left: calc(100vw - 100%);
+  letter-spacing: 1px;
 }
-
-/* @media screen and (max-width: 600px) {
-  body {
-    background: #4e4e50;
-  }
-} */
