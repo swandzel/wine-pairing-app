@@ -8,11 +8,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  background: url(./img/background2.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url(./img/background.jpg);
   padding-left: calc(100vw - 100%);
   letter-spacing: 1px;
 }
