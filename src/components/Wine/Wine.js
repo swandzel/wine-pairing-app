@@ -7,7 +7,7 @@ const Wine = ({ productMatches }) => {
       <div className="product-container">
         <div className="product">
           <div className="productTitle">{productMatches?.title}</div>
-          <div className="productDescription">
+          <div className="product-description">
             {productMatches?.description}
           </div>
           <a href={productMatches?.link} target="_blank" rel="noreferrer">

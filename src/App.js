@@ -100,13 +100,15 @@ const App = () => {
                 exit={exit}
                 className="how-it-works"
               >
-                <p>
-                  <i className="fas fa-info-circle"></i>
-                  Types of food available in the database:
-                  <br />
-                  pizza, pork, lamb, beef, burger, chicken, white fish, salad,
-                  cake
-                </p>
+                {!loader && (
+                  <p>
+                    <i className="fas fa-info-circle"></i>
+                    Types of food available in the database:
+                    <br />
+                    pizza, pork, lamb, beef, burger, chicken, white fish, salad,
+                    cake
+                  </p>
+                )}
               </motion.div>
             )}
           </div>

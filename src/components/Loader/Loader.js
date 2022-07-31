@@ -19,7 +19,10 @@ const Loader = () => (
         transform="translate(0)"
       />
     </motion.svg>
-    <div className="loader-info">Fetching data from Wine Pairing API</div>
+    <div className="loader-info">Fetching data from Wine Pairing API.</div>
+    <div className="loader-info-small">
+      The first fetch may take up to 10 seconds.
+    </div>
   </div>
 );
 
