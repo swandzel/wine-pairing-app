@@ -4,6 +4,7 @@
   align-items: center;
   font-family: "Big Shoulders Stencil Display", serif;
   font-size: 4rem;
+  line-height: 4rem;
   text-align: center;
   color: #000;
   text-transform: uppercase;
@@ -29,12 +30,14 @@
 @media screen and (max-width: 600px) {
   .logo {
     font-size: 3.75rem;
+    line-height: 3.75rem;
   }
 }
 
 @media screen and (max-width: 450px) {
   .logo {
     font-size: 3.5rem;
+    line-height: 3.5rem;
     margin-left: 0rem;
     justify-content: center;
   }
@@ -43,6 +46,7 @@
 @media screen and (max-width: 400px) {
   .logo {
     font-size: 2.75rem;
+    line-height: 2.75rem;
     margin-left: 0rem;
     justify-content: center;
   }
@@ -51,5 +55,6 @@
 @media screen and (max-width: 355px) {
   .logo {
     font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 }
