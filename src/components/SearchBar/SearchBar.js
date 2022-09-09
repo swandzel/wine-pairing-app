@@ -14,7 +14,11 @@ const SearchBar = ({ fetchFunc, query, queryFromSearch, search }) => {
           placeholder="Look for wine for yourself "
         />
       </div>
-      <button className="search-btn" onClick={fetchFunc}>
+      <button
+        className="search-btn"
+        onClick={fetchFunc}
+        aria-label="Search button"
+      >
         <i className="fas fa-search"></i>
       </button>
     </div>
