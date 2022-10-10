@@ -6,7 +6,7 @@ const Grapes = ({ pairedWines, pairingText }) => {
     <div>
       <div className="grapes">
         {pairedWines?.map((pairedWine, index) => (
-          <span className="grape" key={index}>
+          <span className="grape" key={index} data-testid="grapes">
             {pairedWine}
           </span>
         ))}

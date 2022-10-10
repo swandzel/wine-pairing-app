@@ -5,6 +5,11 @@ App is built in React JS and uses my own API (https://wine-pairing-app-api.herok
 
 Check out online: https://wine-pairing-app.netlify.app/
 
+v2.1 update
+
+1. React-Testing-Library added
+2. Small text changes in Loader component
+
 v2 update
 
 1. Changed API from https://spoonacular.com/food-api/ to my own https://wine-pairing-app-api.herokuapp.com.
