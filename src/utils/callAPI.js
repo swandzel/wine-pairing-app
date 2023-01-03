@@ -13,7 +13,7 @@ const callAPI = async (
     setLoader(true);
     try {
       const { data } = await axios.get(
-        `https://wine-pairing-app-api.herokuapp.com/getWine?food=${query.toLocaleLowerCase()}`
+        `https://wine-pairing-api.onrender.com/getWine?food=${query.toLocaleLowerCase()}`
       );
 
       if (data.status === "success") {
