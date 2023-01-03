@@ -5,14 +5,14 @@ App is built in React JS and uses my own API (https://wine-pairing-api.onrender.
 
 Check out online: https://wine-pairing-app.netlify.app/
 
+v2.2 update
+
+Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
+
 v2.1 update
 
 1. React-Testing-Library added
 2. Small text changes in Loader component
-
-v2.1 update
-
-Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
 
 v2 update
 
