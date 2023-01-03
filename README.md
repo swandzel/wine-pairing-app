@@ -1,7 +1,7 @@
 Wine Pairing App by swandzel
 
 App is created to help people choose right wine for their meal.
-App is built in React JS and uses my own API (https://wine-pairing-app-api.herokuapp.com) built in Express JS & MongoDB.
+App is built in React JS and uses my own API (https://wine-pairing-api.onrender.com/) built in Express JS & MongoDB.
 
 Check out online: https://wine-pairing-app.netlify.app/
 
@@ -9,6 +9,10 @@ v2.1 update
 
 1. React-Testing-Library added
 2. Small text changes in Loader component
+
+v2.1 update
+
+Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
 
 v2 update
 
