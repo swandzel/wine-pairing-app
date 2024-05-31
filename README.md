@@ -8,14 +8,14 @@ Check out online: https://wine-pairing-app.netlify.app/
 v2.3 update
 
 1. API changed to https://spoonacular.com/food-api/ due to database deletion
-
-v2.2 update
-
-1. Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
 2. Info and Food components added
 3. Css fixes on mobile
 4. Fetching data function refactored
 5. Placeholder for 404 on image
+
+v2.2 update
+
+1. Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
 
 v2.1 update
 
