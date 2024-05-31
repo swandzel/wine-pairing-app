@@ -18,7 +18,7 @@ const App = () => {
   const { query, setQuery, wine, food, info, loader, fetchWines } =
     useFetchWines();
 
-  const { hidden, visible, exit, fadeTransition } = fadeAnimation;
+  const { hidden, visible, fadeTransition } = fadeAnimation;
   const { open, closed, initial, containerTransition } = containerAnimation;
 
   const search = (e) => {
