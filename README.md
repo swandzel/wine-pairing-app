@@ -1,13 +1,17 @@
 Wine Pairing App by swandzel
 
 App is created to help people choose right wine for their meal.
-App is built in React JS and uses my own API (https://wine-pairing-api.onrender.com/) built in Express JS & MongoDB.
+App is built in React JS and uses <del>my own API (https://wine-pairing-api.onrender.com/) built in Express JS & MongoDB</del> https://spoonacular.com/food-api/.
 
 Check out online: https://wine-pairing-app.netlify.app/
 
+v2.3 update
+
+1. API changed to https://spoonacular.com/food-api/ due to database deletion
+
 v2.2 update
 
-Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
+1. Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
 
 v2.1 update
 

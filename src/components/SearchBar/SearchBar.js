@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = ({ fetchFunc, query, queryFromSearch, search }) => {
+const SearchBar = ({ fetchWines, query, queryFromSearch, search }) => {
   return (
     <div className="search-container">
       <div className="search-box">
@@ -16,7 +16,7 @@ const SearchBar = ({ fetchFunc, query, queryFromSearch, search }) => {
       </div>
       <button
         className="search-btn"
-        onClick={fetchFunc}
+        onClick={fetchWines}
         aria-label="Search button"
       >
         <i className="fas fa-search"></i>
