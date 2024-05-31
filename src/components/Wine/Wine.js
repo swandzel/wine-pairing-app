@@ -1,7 +1,14 @@
 import React from "react";
+
+import placeholderImage from "../../img/wine-placeholder.webp";
+
 import "./Wine.css";
 
 const Wine = ({ productMatches }) => {
+  const handleImageError = (e) => {
+    e.target.src = placeholderImage;
+  };
+
   return (
     <div className="container-wine">
       <div className="product-container">
@@ -17,7 +24,11 @@ const Wine = ({ productMatches }) => {
           </a>
         </div>
         <div className="image">
-          <img src={productMatches?.imageUrl} alt="Our recommended wine" />
+          <img
+            src={productMatches?.imageUrl}
+            alt="Our recommended wine"
+            onError={handleImageError}
+          />
         </div>
       </div>
     </div>

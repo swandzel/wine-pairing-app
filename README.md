@@ -15,6 +15,7 @@ v2.2 update
 2. Info and Food components added
 3. Css fixes on mobile
 4. Fetching data function refactored
+5. Placeholder for 404 on image
 
 v2.1 update
 
