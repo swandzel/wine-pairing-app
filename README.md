@@ -12,6 +12,9 @@ v2.3 update
 v2.2 update
 
 1. Changing hosting from Heroku to Render (https://wine-pairing-api.onrender.com/)
+2. Info and Food components added
+3. Css fixes on mobile
+4. Fetching data function refactored
 
 v2.1 update
 
