@@ -4,6 +4,8 @@ import Grapes from "./components/Grapes/Grapes";
 import Wine from "./components/Wine/Wine";
 import Footer from "./components/Footer/Footer";
 import Loader from "./components/Loader/Loader";
+import Food from "./components/Food/Food";
+import Info from "./components/Info/Info";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeAnimation, containerAnimation } from "./utils/framer-animations";
@@ -43,15 +45,7 @@ const App = () => {
         >
           <Logo refreshPage={refreshPage} />
           <div className="container">
-            <motion.div
-              initial={hidden}
-              animate={visible}
-              exit={exit}
-              key={food}
-              className="food"
-            >
-              {food}
-            </motion.div>
+            <Food food={food} />
 
             <SearchBar
               fetchWines={fetchWines}
@@ -59,14 +53,7 @@ const App = () => {
               queryFromSearch={(query) => setQuery(query)}
               search={search}
             />
-            <motion.div
-              initial={hidden}
-              animate={visible}
-              exit={exit}
-              className="info"
-            >
-              {info}
-            </motion.div>
+            <Info info={info} />
 
             {wine && (
               <motion.div

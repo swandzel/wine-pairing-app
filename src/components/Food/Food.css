@@ -1,0 +1,9 @@
+.food {
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .food {
+    padding-bottom: 0rem;
+  }
+}

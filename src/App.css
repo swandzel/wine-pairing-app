@@ -24,29 +24,8 @@
   text-align: center;
 }
 
-.food {
-  padding-bottom: 1rem;
-}
-
 .error {
   padding: 0;
-}
-
-.info {
-  padding-top: 1rem;
-}
-
-.how-it-works {
-  text-align: center;
-  margin-top: 130px;
-  color: rgb(73, 71, 71);
-}
-
-.how-it-works p i {
-  margin-right: 10px;
-  opacity: 0.5;
-  width: 16px;
-  height: 16px;
 }
 
 @media screen and (max-width: 916px) {
@@ -59,33 +38,17 @@
   .container {
     padding: 0 2rem;
   }
-
-  .how-it-works {
-    margin-top: 80px;
-  }
 }
 
 @media screen and (max-width: 450px) {
   .container {
     padding: 0 1.8rem;
   }
-
-  .how-it-works {
-    font-size: 0.75rem;
-  }
-
-  .how-it-works p i {
-    margin-right: 5px;
-  }
 }
 
 @media screen and (max-width: 400px) {
   .container {
     padding: 0 1.25rem;
-  }
-
-  .food {
-    padding-bottom: 0rem;
   }
 }
 
