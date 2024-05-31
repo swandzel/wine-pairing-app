@@ -9,6 +9,5 @@ body {
   flex-direction: column;
   align-items: center;
   background: url(./img/background.jpg);
-  padding-left: calc(100vw - 100%);
   letter-spacing: 1px;
 }
